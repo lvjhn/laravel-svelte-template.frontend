@@ -1,15 +1,16 @@
-<script> 
-    import "../main.js"
-    import "../style.scss"
+<script>
+  import "../app.scss";
+  import "../main.js";
+  import "../style.scss";
 </script>
 
 <div class="root">
-    <slot />
+  <slot />
 </div>
 
-<style> 
-    .root {
-        width: 960px; 
-        margin: 25px auto;
-    }
+<style>
+  .root {
+    width: 100%;
+    height: 100%;
+  }
 </style>
