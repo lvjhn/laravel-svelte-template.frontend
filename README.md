@@ -1,6 +1,6 @@
-# laravel9-svelte3-template.frontend
+# laravel-svelte-template.frontend
 
-This is a simple Svelte3 template for developing front-ends of apps
+This is a simple Svelte template for developing front-ends of apps
 made with with Laravel (as back-end) and Svelte (as front-end).
 
 It uses SvelteKit in **SPA mode**.
