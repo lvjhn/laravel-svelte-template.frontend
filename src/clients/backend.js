@@ -9,7 +9,7 @@ export function setupBackend() {
      * Set up back-end's HTTP client
      */
     _app.backend.http = Axios.create({
-        baseURL: "http://localhost:8000",
+        baseURL: "http://api.untitled-app.localhost:8000",
         withCredentials: true 
     });
 

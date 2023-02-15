@@ -1,4 +1,11 @@
-<script> 
+<script>
+    import { onClient } from "../helpers/on-client";
+
+    let data; 
+
+    onClient(() => {
+        _app.backend.http.post("/auth/user/profile-information");
+    });
 
 </script> 
 

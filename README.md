@@ -25,6 +25,8 @@ It uses SvelteKit in **SPA mode**.
   * The default authentication module boilerplate uses SvelteUI but other 
     UI component libraries can be used for the actual application.
 
-* [To-Do] Capacitor Integration
+* [Optional] Mobile : Capacitor Integration
   * This repository can be integrated with Capacitor for developing
     mobile applications.
+  * Instructions from third-party source: 
+    * https://changenode.com/articles/sveltekit-wcapacitorjs
