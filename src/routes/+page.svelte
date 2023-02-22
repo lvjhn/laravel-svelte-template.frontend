@@ -28,7 +28,7 @@
     <br />
     <div class="sample-api-result">
         <p align="center">
-            Using sample api from <i>http://jsonplaceholder.typicode.com</i>
+            Using sample API from <i>http://jsonplaceholder.typicode.com</i>
         </p>
         <b>Result : <i>GET /posts/:id</i></b>
         <div class="filter">
