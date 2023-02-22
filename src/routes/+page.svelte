@@ -35,7 +35,7 @@
             <b>ID: &nbsp;</b>
             <input 
                 type="number" 
-                min=0 
+                min=1
                 max=100 
                 bind:value={fetchPostID}
             />
