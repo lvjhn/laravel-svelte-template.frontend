@@ -30,3 +30,19 @@ It uses SvelteKit in **SPA mode**.
     mobile applications.
   * Instructions from third-party source: 
     * https://changenode.com/articles/sveltekit-wcapacitorjs
+
+## Installation 
+```
+npx degit lvjhn/laravel-svelte-template.frontend
+``` 
+
+```
+yarn install 
+# or 
+npm install
+```
+
+## Next Steps 
+1. Change app name in `package.json` and `run.sh` 
+2. Install third-party UI library like SvelteUI, daisyUI, etc.
+3. Install third-party icon sets like [Iconify](https://docs.iconify.design/icon-components/svelte/)
