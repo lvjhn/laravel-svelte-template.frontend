@@ -17,6 +17,10 @@
   },
   "type": "module",
   "dependencies": {
+    "@capacitor/android": "^4.7.0",
+    "@capacitor/cli": "^4.7.0",
+    "@capacitor/core": "^4.7.0",
+    "@capacitor/ios": "^4.7.0",
     "@macfja/svelte-persistent-store": "^2.2.1",
     "@sveltejs/adapter-node": "^1.2.0",
     "@sveltejs/adapter-static": "^2.0.1",
