@@ -21,55 +21,57 @@
 </script> 
 
 <div class="splash"> 
-    <div class="title">
-        <h1>laravel9-svelte3-template.frontend</h1>
-        <h3>Custom Laravel9 + Svelte3 Template</h3>
-    </div> 
-    <br />
-    <div class="sample-api-result">
-        <p align="center">
-            Using sample API from <i>http://jsonplaceholder.typicode.com</i>
-        </p>
-        <b>Result : <i>GET /posts/:id</i></b>
-        <div class="filter">
-            <b>ID: &nbsp;</b>
-            <input 
-                type="number" 
-                min=1
-                max=100 
-                bind:value={fetchPostID}
-            />
-            <button on:click={fetchPost}>
-                Go
-            </button>
-        </div>
-        <div class="result"> 
-            {#if post}
-                <table class="result-table">
-                    <tr> 
-                        <td>ID</td>
-                        <td>{post.id}</td>
-                    </tr>
-                    <tr> 
-                        <td>User ID</td>
-                        <td>{post.userId}</td>
-                    </tr> 
-                    <tr> 
-                        <td>Title</td>
-                        <td>{post.title}</td>
-                    </tr> 
-                    <tr> 
-                        <td>Body</td>
-                        <td>{post.body}</td> 
-                    </tr>
-                </table>
-            {:else}
-                <div class="loading"> 
-                    Loading...
-                </div>
-            {/if}
-        </div>
-    </div> 
+    <div class="splash-content">
+        <div class="title">
+            <h1>laravel9-svelte3-template.frontend</h1>
+            <h3>Custom Laravel9 + Svelte3 Template</h3>
+        </div> 
+        <br />
+        <div class="sample-api-result">
+            <p align="center">
+                Using sample API from <i>http://jsonplaceholder.typicode.com</i>
+            </p>
+            <b>Result : <i>GET /posts/:id</i></b>
+            <div class="filter">
+                <b>ID: &nbsp;</b>
+                <input 
+                    type="number" 
+                    min=1
+                    max=100 
+                    bind:value={fetchPostID}
+                />
+                <button on:click={fetchPost}>
+                    Go
+                </button>
+            </div>
+            <div class="result"> 
+                {#if post}
+                    <table class="result-table">
+                        <tr> 
+                            <td>ID</td>
+                            <td>{post.id}</td>
+                        </tr>
+                        <tr> 
+                            <td>User ID</td>
+                            <td>{post.userId}</td>
+                        </tr> 
+                        <tr> 
+                            <td>Title</td>
+                            <td>{post.title}</td>
+                        </tr> 
+                        <tr> 
+                            <td>Body</td>
+                            <td>{post.body}</td> 
+                        </tr>
+                    </table>
+                {:else}
+                    <div class="loading"> 
+                        Loading...
+                    </div>
+                {/if}
+            </div>
+        </div> 
+    </div>
 </div>
 
 <style lang="scss"> 
@@ -81,37 +83,39 @@
         text-align: center;
         height: 100%; 
         width: 100%;
-        margin-top: 100px;
+        
+        .splash-content { 
+            margin: 20px;
+            margin-top: 50px;
 
-        .title {
-            h1, h3 {
-                margin: 0;
+            .title {
+                h1, h3 {
+                    margin: 0;
+                }
+
+                h3 {
+                    font-weight: normal;
+                }
             }
 
-            h3 {
-                font-weight: normal;
+            .filter {
+                margin: 20px 0;
             }
-        }
 
-        .filter {
-            margin: 20px 0;
-        }
+            .sample-api-result {
+                .result {
+                    .result-table {
+                        tr {
+                            td:first-child {
+                                color: black;
+                                font-weight: bold;
+                                width: 100px;
+                            }  
 
-        .sample-api-result {
-            .result {
-                .result-table {
-                    width: 700px;
-
-                    tr {
-                        td:first-child {
-                            color: black;
-                            font-weight: bold;
-                            width: 100px;
-                        }  
-
-                        td {
-                            border: 1px solid black;
-                            padding: 5px;
+                            td {
+                                border: 1px solid black;
+                                padding: 5px;
+                            }
                         }
                     }
                 }
