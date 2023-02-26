@@ -31,6 +31,12 @@ It uses SvelteKit in **SPA mode**.
   * Instructions from third-party source: 
     * https://changenode.com/articles/sveltekit-wcapacitorjs
 
+* How to turn into SPA?
+  * Uncomment specified lines in: 
+    * `svelte.config.js` 
+    * `src/hooks.js` 
+    * `routes/layout.js`
+
 ## Installation 
 ```
 npx degit lvjhn/laravel-svelte-template.frontend
