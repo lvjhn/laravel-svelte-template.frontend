@@ -104,13 +104,11 @@
 
             .sample-api-result {
                 .result {
-
                     @media only screen and (min-width: 500px) {
                        width: 800px;
                     }
  
                     .result-table {
-
                         tr {
                             td:first-child {
                                 color: black;
