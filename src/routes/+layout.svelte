@@ -1,7 +1,6 @@
 <script>
   import "../app.scss";
   import "../main.js";
-  import "../style.scss";
   import { onMount } from "svelte";
 
   let isReady = false; 

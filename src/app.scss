@@ -1,1 +1,13 @@
-/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+body {
+    font-family: arial;
+    margin: 0px; 
+    padding: 0px;
+}
+
+body, .root, .view {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
