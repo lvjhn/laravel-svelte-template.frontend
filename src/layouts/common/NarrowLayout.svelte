@@ -2,7 +2,7 @@
     import BlankLayout from "./BlankLayout.svelte";
 
     export let width = 960;
-    export let className;
+    export let className = "layout";
 
     let windowWidth  = 0;
 
