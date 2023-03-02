@@ -103,14 +103,7 @@
 
             .sample-api-result {
                 .result {
-<<<<<<< HEAD
-
-                    @media only screen and (min-width: 500px) {
-                       width: 800px;
-                    }
-=======
                     margin: 0 auto; 
->>>>>>> check-capacitor-integration
  
                     .result-table {
 
