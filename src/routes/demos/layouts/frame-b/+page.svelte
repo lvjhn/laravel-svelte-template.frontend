@@ -15,8 +15,8 @@
     <FrameLayout 
         className="content" 
         type="B" 
-        bind:width={windowWidth} 
-        bind:height={windowHeight}
+        width={windowWidth} 
+        height={windowHeight}
     >
         <div slot="left"> 
             Left

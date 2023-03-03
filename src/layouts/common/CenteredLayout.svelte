@@ -8,15 +8,12 @@
     let widthNorm; 
     let heightNorm;
 
-    $ : widthNorm = isNaN(width) ? width + "px" : width;
-    $ : heightNorm = isNaN(width) ? width + "px" : width;
+    $ : widthNorm = !isNaN(width) ? width + "px" : width;
+    $ : heightNorm = !isNaN(height) ? height + "px" : height;
 
     let windowWidth  = 0;
     let windowHeight = 0;
 
-    let marginTop = "auto";
-
-    let paddingBottom = "20";
 
 </script>
 
@@ -25,22 +22,16 @@
     bind:innerHeight={windowHeight}
 />
 
-{#if windowWidth > width}
+{#if windowWidth > parseInt(width) + 100}
     <div 
         class="centered-layout {className}"
     >
-        <div 
-            class="centered-container"
-            style="
-                width: 100%;
-                height: 100%;
-            "
-        >
+        <div class="centered-item-container">
             <div 
                 class="centered-item"
                 style="
                     width: {widthNorm}; 
-                    height: {heightNorm}; 
+                    height: {heightNorm};
                 "
             >
                 <slot isBlankLayout={false} />
@@ -56,17 +47,9 @@
 
 <style> 
     .centered-layout {
-        display: table;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .centered-container {
-        display: table-cell;
-        vertical-align: middle;
-    }
-
-    .centered-item {
-        margin: 0 auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
 </style>

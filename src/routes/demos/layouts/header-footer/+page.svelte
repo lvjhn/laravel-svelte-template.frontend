@@ -8,8 +8,6 @@
     let isRightShown = false;
 
     let innerContentHeight;
-
-
 </script>
 
 <svelte:window 
@@ -32,26 +30,8 @@
         <div slot="bottom"> 
             Bottom
         </div> 
-        <div 
-            slot="middle" bind:clientHeight={innerContentHeight} 
-            style="height: 100%;"
-        > 
-            <FrameLayout 
-                className="inner-content" 
-                type="A" 
-                width="auto"
-                height={innerContentHeight}
-            >
-                <div slot="top"> 
-                    Top            
-                </div>
-                <div slot="bottom"> 
-                    Bottom
-                </div> 
-                <div slot="middle"> 
-                    Middle
-                </div>
-            </FrameLayout>
+        <div slot="middle"> 
+            Middle
         </div>
     </FrameLayout>
 </div>

@@ -106,7 +106,6 @@
                     margin: 0 auto; 
  
                     .result-table {
-
                         tr {
                             td:first-child {
                                 color: black;

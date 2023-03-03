@@ -5,7 +5,9 @@
 <div class="view">
     <CenteredLayout className="content" width="600" height="300">
         <div class="inner-content">
-            Hello, from CenteredLayout! <br />
+            <div class="title">
+                Hello, from CenteredLayout! 
+            </div>
         </div>
     </CenteredLayout>
 </div>
@@ -20,14 +22,16 @@
         padding: 20px;
         box-shadow: 0px 0px 2px grey;
         border-radius: 5px;
-        height: 100%;   
     }
 
     :global(.content.blank-layout) {
-        box-shadow: none;
-        
         .inner-content {
             color: red;
+            box-shadow: none;
+
+            .title {
+                text-align: center;
+            }
         }
     }
 </style>
