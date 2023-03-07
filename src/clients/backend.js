@@ -3,12 +3,12 @@ import Pusher from 'pusher-js'
 import Echo from 'laravel-echo'
 
 export function setupBackend() {
-    _app.backend = {};
+    let client = _app.backend = {};
 
     /**
      * Set up back-end's HTTP client
      */
-    _app.backend.http = Axios.create({
+    client.http = Axios.create({
         baseURL: "http://api.untitled-app.localhost:8000",
         withCredentials: true 
     });
@@ -16,7 +16,7 @@ export function setupBackend() {
     /**
      * Set up back-end's WebSocket client
      */
-    _app.backend.ws = new Echo({
+    client.ws = new Echo({
         broadcaster: 'pusher',
         key: '1234',
         wsHost: 'localhost',
