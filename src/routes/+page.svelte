@@ -108,7 +108,8 @@
                     .result-table {
                         tr {
                             td:first-child {
-                                color: black;
+                                color: white;
+                                background-color: rgb(50, 70, 80);
                                 font-weight: bold;
                                 width: 100px;
                             }  

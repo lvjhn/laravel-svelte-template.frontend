@@ -19,7 +19,7 @@ export function setupBackend() {
     client.ws = new Echo({
         broadcaster: 'pusher',
         key: '1234',
-        wsHost: 'localhost',
+        wsHost: '127.0.0.1',
         wsPort: 6001,
         forceTLS: false,
         disableStats: true, 
