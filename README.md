@@ -7,24 +7,13 @@ It uses SvelteKit in **SPA mode**.
 
 # Set-up Description
 
-* Pre-installed packages
-  * **Clients** - Pre-installed `axios`, `pusher-js`, and `laravel-echo`
-  * **Stylings** - Pre-installed `sass` and `svelte-preprocess`
-  * **Drag-and-Drop** - Pre-installed `svelte-dnd-action`
-  * **Persistent Stores** -  Pre-installed `svelte-persistent-store`
+* Pre-installed packages (see `package.json` for versions)
+  * **Clients** - `axios`, `pusher-js`, and `laravel-echo`
+  * **Stylings** - `sass` and `svelte-preprocess`
+  * **Drag-and-Drop** - `svelte-dnd-action`
+  * **Persistent Stores** -  `svelte-persistent-store`
 
 * UI component libraries like daisyUI, skeleton, flowbite-svelte, svelteui, etc. can be manually installed. 
-
-* Authentication Module Boilerplate
-  * This template comes with an authenticate module boilerplate that
-    connects with the corresponding [back-end](https://github.com/lvjhn/laravel9-svelte3-template.backend) 
-    template's authentication API through session cookies or Laravel Sanctum
-    tokens. 
-  * The boilerplate is under the `/auth` route folder. This can be replaced 
-    with a customized version. 
-  * Log-in with Google or Facebook buttons are prepared in the login screen. 
-  * The default authentication module boilerplate uses SvelteUI but other 
-    UI component libraries can be used for the actual application.
 
 * [Optional] Mobile : Capacitor Integration
   * This repository can be integrated with Capacitor for developing
@@ -42,7 +31,7 @@ It uses SvelteKit in **SPA mode**.
 ```
 npx degit lvjhn/laravel-svelte-template.frontend
 ``` 
-
+then 
 ```
 yarn install 
 # or 
