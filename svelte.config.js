@@ -7,12 +7,12 @@ import nodeAdapter from '@sveltejs/adapter-node';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    // adapter: nodeAdapter(), 
+    adapter: nodeAdapter(), 
 
     /** Use static adapter instead */
-    adapter: staticAdapter({
-      fallback: 'index.html'
-    }) 
+    // adapter: staticAdapter({
+    //   fallback: 'index.html'
+    // }) 
   },
 
   preprocess: [

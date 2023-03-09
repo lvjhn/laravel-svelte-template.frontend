@@ -1,9 +1,10 @@
-/**
- * Uncomment this line to disable SSR. 
- */
+
 export const handle = async ({ event, resolve }) => {
-    const response = await resolve(event, {
-      ssr: false,
-    });
-    return response;
+  
+  const response = await resolve(event, {
+    /** Uncomment line below to disable ssr */
+    // ssr: false,  
+  });
+
+  return response;
 };

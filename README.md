@@ -8,9 +8,10 @@ It uses SvelteKit in **SPA mode**.
 # Set-up Description
 
 * Pre-installed packages
-  * Pre-installed `axios`, `pusher-js`, and `laravel-echo`
-  * Pre-installed `svelte-dnd-action`
-  * Pre-installed `svelte-persistent-store`
+  * **Clients** - Pre-installed `axios`, `pusher-js`, and `laravel-echo`
+  * **Stylings** - Pre-installed `sass` and `svelte-preprocess`
+  * **Drag-and-Drop** - Pre-installed `svelte-dnd-action`
+  * **Persistent Stores** -  Pre-installed `svelte-persistent-store`
 
 * UI component libraries like daisyUI, skeleton, flowbite-svelte, svelteui, etc. can be manually installed. 
 

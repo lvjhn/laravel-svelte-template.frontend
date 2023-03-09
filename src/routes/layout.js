@@ -1,2 +1,3 @@
-/** Uncomment this line to disable SSR */
-export const ssr = false;
+/** Uncomment line below to disable SSR */
+// export const ssr = false;
+
