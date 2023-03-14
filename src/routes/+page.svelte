@@ -3,13 +3,34 @@
     import NarrowLayout from "@/layouts/common/NarrowLayout.svelte";
 
     let post; 
+    let pingData; 
+    let wsPingEventData;
     let fetchPostID = 1;
 
     onClient(async () => {
-        let result = await _app.sampleAPI.http.get("/posts/" + fetchPostID);
-        post = result.data;
-        console.log(post);
+        handleWsEvents();
+        doHttpRequests();
     });
+
+    async function doHttpRequests() {
+        _app.sampleAPI.http.get("/posts/" + fetchPostID)
+            .then((response) => {
+                post = response.data;
+            });
+    
+
+        _app.backend.http.get("/ping")
+            .then((response) => {
+                pingData = response.data;
+            }); 
+    }
+
+    async function handleWsEvents() {
+        _app.backend.ws.channel("PingChannel")
+            .listen(".ping_channel.ping_event", (event) => {
+                wsPingEventData = event;
+            });
+    }
 
     function fetchPost() {
         onClient(async () => {
@@ -30,9 +51,7 @@
             </div> 
             <br />
             <div class="sample-api-result">
-                <p align="center">
-                    Using sample API from <i>http://jsonplaceholder.typicode.com</i>
-                </p>
+                <h2>Sample API</h2      >
                 <b>Result : <i>GET /posts/:id</i></b>
                 <div class="filter">
                     <b>ID: &nbsp;</b>
@@ -72,6 +91,29 @@
                         </div>
                     {/if}
                 </div>
+            </div>  
+            <div class="backend-result">
+                <h2>Back-end</h2>   
+
+                <b>Result : HTTP - <i>GET /api/ping</i></b>
+                <div class="result"> 
+                    {#if pingData}
+                        <pre>{JSON.stringify(pingData, null, 2)}</pre>
+                    {:else}
+                        <div class="loading"> 
+                            Loading...
+                        </div>
+                    {/if}
+                </div>
+
+                <b>Result : WebSockets - PingChannel</b>
+                <div class="result"> 
+                    {#if wsPingEventData}
+                        <pre>{JSON.stringify(wsPingEventData, null, 2)}</pre>
+                    {:else} 
+                        <pre>Loading...</pre>
+                    {/if}
+                </div>
             </div> 
         </div>  
     </NarrowLayout>
@@ -79,7 +121,6 @@
 
 <style lang="scss"> 
     .splash {
-        text-align: center;
         height: 100%; 
         width: 100%;
         
@@ -122,6 +163,10 @@
                     }
                 }
             }
+        }
+
+        .loading {
+            margin-top: 20px;
         }
     }
 </style>
